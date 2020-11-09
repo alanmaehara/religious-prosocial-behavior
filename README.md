@@ -48,7 +48,7 @@ The paper proceeds as follows. Section two provides a literature review on relig
 ---
 ## 2. Literature Review
 
-[(go to next section)](#2-1-religion-prosociality-in-economics)
+[(go to next section)](#3-methods)
 
 The idea that religion is a driver for generous acts is not a widespread belief by chance. Great part of religious providers finds their own teachings encouraging followers towards more cooperative, generous, or simply “good” acts as a way for salvation, to avoid damnation (as in Christianism), or to better live their lives and coexist with others in harmony. 
 
@@ -88,13 +88,13 @@ In this present research, **the hypothesis tested is that religious proposers wo
 ---
 ## 3. Methods
 
-[(go to next section)](#3-1-measuring-religiosity)
+[(go to next section)](#4-results)
 
 For this experiment, 48 international students ranging from 19 to 33 years (average of 23 years old) were recruited from undergraduate and graduate courses in a university located in Tokyo, Japan, and played the ultimatum bargaining game in classrooms. 41 students are Buddhists, two follows Christianism, one follows Spiritualism, and the remnant four students are Agnostics. The pool of participants is predominantly international: 18 from Southeast Asia, 10 from South America, 8 from East Asia, 4 from South Asia, 3 from Central and North America, 3 from Europe, and 1 from Oceania. Subjects were randomly assigned to proposer and responder roles, and experiments were handled in two days. All proposers are Buddhist practitioners, whereas a few responders are not Buddhists. In order to avoid [learning effects](https://en.wikipedia.org/wiki/Testing_effect), recipients played only one-round of the game. 12 recipients did not show up on time. 
 
 Two classrooms were used, being one designated for proposers and the other for responders. In order to avoid expectations and deception, a unique three-digit number code were given for each player so that players would not possess any information regarding other player`s identities. In addition, tables and seats on classrooms were disposed to be facing the wall so that participants would not be able to look on the other player’s tables, and distance between classrooms was considerably far from each other. Entry and exit times for proposers and responders were also set differently. 
 
-In the beginning of the experiment, participants were asked to remain silent until the end of the experiment. Participants also received a pack of documents containing: (1) instructions of the game accordingly to the role received (see [Appendix A]((#appendix-a-experimental-design-archives)) for instructions); (2) a quiz with four questions to ensure participant`s understanding on the mechanics of the game (see [Appendix A](#appendix-a-experimental-design-archives)); (3) a proposal form (see [Appendix A](#appendix-a-experimental-design-archives)); (4) payoff envelopes. 10 minutes were given for participants to read instructions and answer the quiz. A Q&A session was held afterwards to clarify any questions. Proposers started the game with an initial endowment of 10 false notes of 1,000 Japanese yen (JPY), which totaled 10,000 yen as the whole pie size. A strategy set for proposers (Sp) in this game is defined as being:
+In the beginning of the experiment, participants were asked to remain silent until the end of the experiment. Participants also received a pack of documents containing: (1) instructions of the game accordingly to the role received (see [Appendix A](#appendix-a-experimental-design-archives)) for instructions); (2) a quiz with four questions to ensure participant`s understanding on the mechanics of the game (see [Appendix A](#appendix-a-experimental-design-archives)); (3) a proposal form (see [Appendix A](#appendix-a-experimental-design-archives)); (4) payoff envelopes. 10 minutes were given for participants to read instructions and answer the quiz. A Q&A session was held afterwards to clarify any questions. Proposers started the game with an initial endowment of 10 false notes of 1,000 Japanese yen (JPY), which totaled 10,000 yen as the whole pie size. A strategy set for proposers (Sp) in this game is defined as being:
 
 ![](img/sp.PNG)
 
