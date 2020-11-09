@@ -1,6 +1,14 @@
 # Does religion generate prosocial behavior?
 <img src="https://miro.medium.com/max/1000/1*7B9sJqTLMQtYHByl-r3Ozw.png" alt="drawing" width="100%"/>
-A multivariate linear regression modeling approach to measure religious prosocial behavior
+
+This repository replicates the dissertation thesis I wrote in 2019 called _"Does religion generate prosocial behavior? Evidence from ultimatum games in a Buddhist-based international community in Japan"_. R codes are provided except for datasets with sensitive data - for more details, contact me on Github or [Linkedin](https://www.linkedin.com/in/ammaehara/). 
+
+In this thesis, association between religion and prosocial behavior were investigated for Buddhist practitioners. In order to do so, I designed and implemented an economics experiment with 48 participants in a higher-education institution in Tokyo, Japan. An one-shot ultimatum bargaining game was conducted with religious and non-religious participants, and two linear regression models were created to explain prosocial behavior.  
+
+To distinguish religious subjects from non-religious ones, a multidimensional measure for religiosity called DUREL (Duke Religious Index) was utilized. Results of this research suggest that there is little evidence of behavior change between subjects, although it was observed more prosocial behaviors among religious participants than non-religious participants. 
+
+Due to the low sample size, a non-parametric test (Wilcoxon Rank Sum/Mann-Whitney Test) was done to validate the equality of means of a religious sample and non-religious sample. Results were not statistically significant - which reinforces the idea that religion poorly explains prosocial behavior as the past literature suggests.
+
 
 ---
 ## Table of Contents
@@ -87,11 +95,11 @@ Two classrooms were used, being one designated for proposers and the other for r
 
 In the beginning of the experiment, participants were asked to remain silent until the end of the experiment. Participants also received a pack of documents containing: (1) instructions of the game accordingly to the role received (see [Appendix A]((#appendix-a-experimental-design-archives)) for instructions); (2) a quiz with four questions to ensure participant`s understanding on the mechanics of the game (see [Appendix A](#appendix-a-experimental-design-archives)); (3) a proposal form (see [Appendix A](#appendix-a-experimental-design-archives)); (4) payoff envelopes. 10 minutes were given for participants to read instructions and answer the quiz. A Q&A session was held afterwards to clarify any questions. Proposers started the game with an initial endowment of 10 false notes of 1,000 Japanese yen (JPY), which totaled 10,000 yen as the whole pie size. A strategy set for proposers (Sp) in this game is defined as being:
 
-$\large Sp ∈ \{0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000\}$
+![](img/sp.PNG)
 
 while a strategy set for responders (Sr) is consisted on a decision:
 
-$\large Sr ∈ \{accept,reject\}$
+![](img/sr .PNG)
 
 and used right after the strategy chosen by proposers is known by responders. A payoff table is shown below (Table 1) with the 11 proposer’s strategy options against the responder’s strategy space.
 
@@ -103,7 +111,7 @@ Monetary rewards were set in order to stimulate participant`s best response. The
 
 #### 3.1. Measuring Religiosity
 
-In order to measure participant’s religiosity, all recipients were asked to answer a Likert-scaled questionnaire of 20 items, in which five of them were taken from [the Duke University Religion Index (DUREL)](https://scholars.duke.edu/display/pub960636). The remnant 15 questions were related to Politics, Economics, and Culture as distractors, and were worded in neutral language in order to avoid framing effects (Tversky & Kahnemann, 1981). Questionnaires were done online before the experiment time (see [Appendix A](#appendix-a-experimental-design-archives) for raw results).
+In order to measure participant’s religiosity, all recipients were asked to answer a Likert-scaled questionnaire of 20 items, in which five of them were taken from [the Duke University Religion Index (DUREL)](https://scholars.duke.edu/display/pub960636). The remnant 15 questions were related to Politics, Economics, and Culture as distractors, and were worded in neutral language in order to avoid framing effects (Tversky & Kahnemann, 1981). Questionnaires were done online before the experiment time.
 
 The DUREL model was chosen for having the best fit for the purposes of this research since it measures religiosity in a multidimensional fashion. Apart from Tan (2006), past research has considered participation frequency on religious activities as the main indicator for religiosity (see Parrett & Grossmann, 2011; Anderson & Mellor, 2009; Anderson, Mellor & Milyo, 2010; Eckel & Grossmann, 2004), although the measurement of religiosity requires a more complete assessment that considers at least 10 major dimensions of religiosity (Koenig, 2015, p.530), named: (1) belief; (2) religious motivation; (3) organizational religious activities (ORA), (4) non-organizational activities (NORA); (5) attachment to God; (6) trust in God; (7) religious experience; (8) religious coping; (9) religious maturity; and (10) religion exposure. Another indicator that contains some of the dimensions mentioned above and is included in the DUREL scale is intrinsic religiosity (IR), which is described as the dimension that measures individuals who consider religion as an end in itself, “a master motive” (Masters, 2013). For this experiment, Koenig’s recommendation on the usage of the DUREL scale were followed, given that it covers ORA, NORA, and IR dimensions, making it a comprehensive measure for religiosity in this research. 
  
@@ -113,7 +121,15 @@ DUREL questions were adapted given the predominance of Buddhist practitioners in
 
 Questions for ORA and NORA dimensions go on a range of 1-6, whereas questions for IR go on a range of 1-5 – totaling 27 points for all five questions. A "1" answer stands for “definitely not true” or “never” type of answer, whereas a "6" answer means “definitely true” or “always”. 
 
-Internal consistency of the likert-scaled DUREL questions was also analyzed after receiving the answers from participants. Considering all five questions, a [Cronbach alpha](https://en.wikipedia.org/wiki/Cronbach%27s_alpha) of 0.65 was obtained, and an alpha of 0.75 was observed when removing the CARRYON variable. Since removing the latter variable gives a more consistent measure of religiosity, the variable CARRYON was not considered for the specification model. 
+Internal consistency of the likert-scaled DUREL questions was also analyzed after receiving the answers from participants. Considering all five questions, a [Cronbach alpha](https://en.wikipedia.org/wiki/Cronbach%27s_alpha) of 0.65 was obtained and an alpha of 0.75 would be observed if the IR3 (CARRYON) variable is dropped:
+
+![](img/cronbach.PNG)
+
+We then dropped the IR3 variable, obtaining a Cronbach's alpha of 0.75 as mentioned:
+
+![](img/cronbach_official.PNG)
+
+Since removing the latter variable gives a more consistent measure of religiosity, the variable CARRYON was not considered for the specification model. 
 
 In this paper, **two linear regression models were modeled** with proposer offer (measured in Japanese yen - labeled as PROPOFFER) as the dependent variable, **being the first one (Model I) a more general specification**:
 
@@ -142,17 +158,17 @@ Results of the multiple regression analysis for the general model (I) and its ex
 
 ![](img/results.png)
 
-In the Model I, the coefficient for the variable AGE is significant and negative. In general, proposer offers were higher for younger participants, although 75% of subjects are around 20-25 years old. For the variable TOTSCORE, coefficient is positive and significant (p<0.10), which goes on the contrary hand of the results of other laboratories in which there were, in most cases, no significant behavioral differences between religious and non-religious participants. 
+In the Model I, the coefficient for the variable AGE is significant and negative (coefficient of -0.63, t-statistic of -3.3). In general, proposer offers were higher for younger participants, although 75% of subjects are around 20-25 years old. For the variable TOTSCORE, coefficient is positive and significant (p<0.10), which goes on the contrary hand of the results of other laboratories in which there were, in most cases, no significant behavioral differences between religious and non-religious participants. 
 
 Model II shows results considering all DUREL dimensions. Again, the coefficient for the variable AGE is significant and negative, in which the reasons were stated above as for the general model. No other variable is significant, which suggests that there is no single religiosity dimension that plays a decisive role on more generous offers. However, if religiosity is seen as a general score indicator (model I) depicted by TOTSCORE, then it could be possible to infer that participants with higher religiosity might be more willing to offer higher stakes than ones with lower religiosity levels.  
 
-Given the number of participants for this experiment, a non-parametric statistical test was utilized. Sample was divided into “religious” and “non-religious” by using a cutoff of 18 points on the variable TOTSCORE. Since all proposers come from a Buddhist background, this cutoff number was adapted according to the conventions of the Buddhist practice, such as two-time daily praying sessions (one in the morning, another in the evening), and more than once a month gathering meetings at Buddhist centers. Participants who scored below 18 points were allocated in the “non-religious” treatment, whereas participants whose score marked above the cutoff were allocated in the “religious” treatment.  
+Given the number of participants for this experiment, a non-parametric statistical test (Wilcoxon Rank-Sum Test) was utilized. Sample was divided into “religious” and “non-religious” by using a cutoff of 18 points on the variable TOTSCORE. Since all proposers come from a Buddhist background, this cutoff number was adapted according to the conventions of the Buddhist practice, such as two-time daily praying sessions (one in the morning, another in the evening), and more than once a month gathering meetings at Buddhist centers. Participants who scored below 18 points were allocated in the “non-religious” treatment, whereas participants whose score marked above the cutoff were allocated in the “religious” treatment.  
 
-The raw data of all offers can be found in [Appendix A](#appendix-a-experimental-design-archives). For the religious group, it was observed that mean offers are on par with the existent literature. On average, proposers offered 4,700 Japanese Yen (JPY) to responders out of 10,000 JPY (around 47% of the total endowment), with 17% of responders rejecting offers. It was also observed that 52% of proposers opted for more “fair and charity offers” (terminology referencing to proposers offering more or equal than 50% of the total endowment, in this case x > 5,000), which supports the idea that proposer mean offers would go strictly close to half the initial endowment. In the non-religious treatment, mean offers counts for 3,570 JPY (35% of the total endowment), with a rejection rate of 14%. Fair and charity offers were fewer than its counterpart treatment, with around 42% of proposers opting for such offers. The experimental data is summarized in Table 4.
+For the religious group, it was observed that mean offers are on par with the existent literature. On average, proposers offered 4,700 Japanese Yen (JPY) to responders out of 10,000 JPY (around 47% of the total endowment), with 17% of responders rejecting offers. It was also observed that 52% of proposers opted for more “fair and charity offers” (terminology referencing to proposers offering more or equal than 50% of the total endowment, in this case x > 5,000), which supports the idea that proposer mean offers would go strictly close to half the initial endowment. In the non-religious treatment, mean offers counts for 3,570 JPY (35% of the total endowment), with a rejection rate of 14%. Fair and charity offers were lower than its counterpart treatment, with around 42% of proposers opting for such offers. The experimental data is summarized in Table 4.
 
 ![](img/table4.png)
 
-For the given sample size, the null hypothesis that there is not a significant change on proposer offers between religious and non-religious treatments was not rejected (U = 73.5, p = 0.38), although more fair offers (X=5,000) and charity offers (5,000 < X ≤ 10,000), were observed in the religious group, which is illustrated in the boxplot in Figure 2.
+For the given sample size, **the null hypothesis that there is not a significant change on proposer offers between religious and non-religious treatments was not rejected (U = 73.5, p = 0.38)**, although more fair offers (X=5,000) and charity offers (5,000 < X ≤ 10,000), were observed in the religious group, which is illustrated in the boxplot in Figure 2.
 
 ![](img/boxplot.png)
 _Figure 2. Proposer offers done by religious and non-religious participants._
@@ -254,8 +270,6 @@ Wilson, B. (1966). Religion in the Secular Society: A Sociological Comment. Watt
 |2|Instructions for Responders|--|
 |3|Quiz|--|
 |4|Proposal Form|--|
-|5|Questionnaire Results|--|
-|6|Proposer Offers and Final Results|--|
 
 
 [back to top](#table-of-contents)
