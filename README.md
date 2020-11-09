@@ -9,6 +9,7 @@ To distinguish religious subjects from non-religious ones, a multidimensional me
 
 Due to the low sample size, a non-parametric test (Wilcoxon Rank Sum/Mann-Whitney Test) was done to validate the equality of means of a religious sample and non-religious sample. Results were not statistically significant - which reinforces the idea that religion poorly explains prosocial behavior as the past literature suggests.
 
+To access the project's notebook (written in R), click [here](https://github.com/alanmaehara/religious-prosocial-behavior/blob/master/prosocial_behavior_project.ipynb).
 
 ---
 ## Table of Contents
@@ -99,7 +100,7 @@ In the beginning of the experiment, participants were asked to remain silent unt
 
 while a strategy set for responders (Sr) is consisted on a decision:
 
-![](img/sr .PNG)
+![](img/sr.PNG)
 
 and used right after the strategy chosen by proposers is known by responders. A payoff table is shown below (Table 1) with the 11 proposer’s strategy options against the responder’s strategy space.
 
@@ -133,17 +134,15 @@ Since removing the latter variable gives a more consistent measure of religiosit
 
 In this paper, **two linear regression models were modeled** with proposer offer (measured in Japanese yen - labeled as PROPOFFER) as the dependent variable, **being the first one (Model I) a more general specification**:
 
-$PROPOFFER_i = \beta_0 + \beta_1Female_i + \beta_2Age + \beta_3Totscore_i + \varepsilon_i$
+![](img/model1.PNG)
 
 where:
 
-$Female$ = dummy variable for gender where 1 equals female, zero otherwise;
-$Age$ = age of participant $i$;
-$Totscore$ = total score obtainable in the DUREL scale by each participant $i$;
+![](img/model1_1.PNG)
 
 and **the second one (Model II) a extended version considering all dimensions of religiosity** described above (refer to table 2):
 
-$PROPOFFER_i = \beta_0 + \beta_1Female_i + \beta_2Age + \beta_3Freq_i + \beta_4Private_i + \beta_5Presence_i + \beta_6Beliefs_i + \varepsilon_i$
+![](img/model2.PNG)
 
 The need for two models relies on the fact that: (1) the first model would consider religiosity as a sum of all dimensions, allowing for more comprehensive results; (2) the second model would address which dimension plays a role on offers made by proposers. As mentioned in the previous section, past studies have relied only on the FREQ variable to measure prosocial behavior coming from religiosity, but it might be the case that other aspects of religiosity would have a role on more generous offers.
 
@@ -174,6 +173,8 @@ For the given sample size, **the null hypothesis that there is not a significant
 _Figure 2. Proposer offers done by religious and non-religious participants._
 
 It is notable to mention the disparity between the sample size of the religious and non-religious groups, being the religious one the largest. However, even though religious participants outnumbered around two times the non-religious ones, the results still reflect the findings of the current literature: **there is little evidence of prosocial behavior disparities between non-religious or religious people.**
+
+Datasets are publicly available in this repository (see [Appendix A](#appendix-a-experimental-design-archives)) except for the raw data due to the experiment's confidentiality terms. 
 
 [back to top](#table-of-contents)
 
@@ -264,13 +265,17 @@ Wilson, B. (1966). Religion in the Secular Society: A Sociological Comment. Watt
 
 ## Appendix A: Experimental Design Archives
 
-|No|Archive Name|Link|
+|No|Archive Name|Source|
 |--|--|--|
-|1|Instructions for Proposers|--|
-|2|Instructions for Responders|--|
-|3|Quiz|--|
-|4|Proposal Form|--|
-
+|1|Instructions for Proposers|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/archives)|
+|2|Instructions for Responders|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/archives)|
+|3|Quiz|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/archives)|
+|4|Proposal Form|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/archives)|
+|5|prosoc.xlsx - Proposer's data (participant's religion, age, gender, DUREL answer, ultimatum game results)|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/datasets)|
+|6|crontesall.xlsx - DUREL questionnaire data (dimensions only)|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/datasets)|
+|7|crontest.xlsx - DUREL questionnaire data without IR3 dimension|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/datasets)|
+|8|relig.xlsx - Religious Proposers' data|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/datasets)|
+|9|nonrelig.xlsx - Non-Religious Proposers' data|[link](https://github.com/alanmaehara/religious-prosocial-behavior/tree/master/datasets)|
 
 [back to top](#table-of-contents)
 
