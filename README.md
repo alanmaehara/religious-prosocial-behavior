@@ -155,7 +155,7 @@ The need for two models relies on the fact that: (1) the first model would consi
 
 Results of the multiple regression analysis for the general model (I) and its extended version (Model II) are presented below on table 3:
 
-![](img/results.png)
+<p align="center"><img width="100%" alt="drawing" src="img/results.png"></p>
 
 In the Model I, the coefficient for the variable AGE is significant and negative (coefficient of -0.63, t-statistic of -3.3). In general, proposer offers were higher for younger participants, although 75% of subjects are around 20-25 years old. For the variable TOTSCORE, coefficient is positive and significant (p<0.10), which goes on the contrary hand of the results of other laboratories in which there were, in most cases, no significant behavioral differences between religious and non-religious participants. 
 
@@ -169,7 +169,9 @@ For the religious group, it was observed that mean offers are on par with the ex
 
 For the given sample size, **the null hypothesis that there is not a significant change on proposer offers between religious and non-religious treatments was not rejected (U = 73.5, p = 0.38)**, although more fair offers (X=5,000) and charity offers (5,000 < X ≤ 10,000), were observed in the religious group, which is illustrated in the boxplot in Figure 2.
 
-![](img/boxplot.png)
+
+<p align="center"><img width="100%" alt="drawing" src="img/boxplot.png"></p>
+
 _Figure 2. Proposer offers done by religious and non-religious participants._
 
 It is notable to mention the disparity between the sample size of the religious and non-religious groups, being the religious one the largest. However, even though religious participants outnumbered around two times the non-religious ones, the results still reflect the findings of the current literature: **there is little evidence of prosocial behavior disparities between non-religious or religious people.**
